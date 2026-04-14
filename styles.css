@@ -91,6 +91,49 @@ textarea {
 .top-links {
   display: flex;
   gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #0f2c53;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #67dbc6, #89bcff);
+  color: #031a34;
+  font-size: 13px;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.user-chip-copy {
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+}
+
+.user-chip-copy strong {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-chip-copy span {
+  font-size: 11px;
+  color: var(--muted);
 }
 
 .button {
@@ -98,9 +141,13 @@ textarea {
   border-radius: 999px;
   min-height: 38px;
   padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   cursor: pointer;
   transition: transform 130ms ease;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -260,6 +307,25 @@ textarea {
   padding: 14px;
   display: grid;
   gap: 14px;
+}
+
+.api-bar {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.api-bar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.api-bar h3 {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
 }
 
 .operation-block {

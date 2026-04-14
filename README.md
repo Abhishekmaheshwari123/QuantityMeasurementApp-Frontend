@@ -1,32 +1,25 @@
-# QuantityMeasurementApp-Frontend
+# Quantity Measurement App
 
-Static frontend for the QuantityMeasurementApp backend.
-
-## Files
-
-- `index.html` - dashboard for convert, compare, and arithmetic requests
-- `login.html` - JWT login form
-- `signup.html` - account creation form
-- `styles.css` - shared UI styling
-- `config.js` - backend URL and endpoint configuration
-- `app.js` - API calls, auth state, and local history
-
-## Backend Connection
-
-The frontend targets the backend API at `http://localhost:5044/api` by default.
-
-You can change the API base URL from the UI on the dashboard or the auth pages, and the value is saved in localStorage.
+React frontend for the QuantityMeasurement backend, built with Vite.
 
 ## Run Locally
 
-Serve this folder with any static file server, then open `index.html` in the browser.
+1. Install dependencies with `npm install`.
+2. Start the app with `npm run dev`.
+3. Open the local Vite URL in your browser.
 
-Examples:
+## Project Files
 
-- VS Code Live Server
-- `python -m http.server 5500`
+- `index.html` is now the React mount page.
+- `src/App.jsx` contains the dashboard, login, and signup screens.
+- `src/utils.js` handles API calls, localStorage, and response formatting.
+- `styles.css` still provides the shared visual system for the React UI.
 
-## Expected Backend Routes
+## Legacy Entry Points
+
+`login.html` and `signup.html` now redirect into the React router so old bookmarks still work.
+
+## Backend Routes
 
 - `POST /api/Auth/signup`
 - `POST /api/Auth/login`
