@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Quantity Measurement App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="auth" data-auth="signup">
+    <main class="screen auth-shell">
+      <section class="auth-left">
+        <p class="mini-tag">signup</p>
+        <h1>Create your account.</h1>
+        <p>Register once and access conversion, comparison, and arithmetic endpoints with JWT auth.</p>
+        <div class="auth-stats">
+          <span>Create account using full name, email, and password</span>
+          <span>Password must be at least 8 characters</span>
+        </div>
+      </section>
+
+      <section class="auth-right">
+        <form id="signupForm" class="auth-form-card">
+          <label for="signupFullName">Full name</label>
+          <input id="signupFullName" type="text" placeholder="Alex Johnson" required />
+
+          <label for="signupEmail">Email address</label>
+          <input id="signupEmail" type="email" placeholder="you@example.com" required />
+
+          <label for="signupPassword">Password</label>
+          <input id="signupPassword" type="password" placeholder="At least 8 characters" required minlength="8" />
+
+          <div class="auth-actions">
+            <button class="button button-primary" type="submit">Sign up</button>
+            <a href="login.html" class="button button-ghost">Login</a>
+          </div>
+          <div id="signupFeedback" class="feedback"></div>
+          <a href="index.html" class="back-link">Back to dashboard</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

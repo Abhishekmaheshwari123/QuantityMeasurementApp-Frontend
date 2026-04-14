@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Quantity Measurement App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="auth" data-auth="login">
+    <main class="screen auth-shell">
+      <section class="auth-left">
+        <p class="mini-tag">login</p>
+        <h1>Welcome back.</h1>
+        <p>Access your measurement dashboard quickly, securely, and from anywhere.</p>
+        <div class="auth-stats">
+          <span>Tip: use the same email you used during signup</span>
+          <span>Your session starts instantly after successful login</span>
+        </div>
+      </section>
+
+      <section class="auth-right">
+        <form id="loginForm" class="auth-form-card">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" type="email" placeholder="you@example.com" required />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" placeholder="Your password" required />
+
+          <div class="auth-actions">
+            <button class="button button-primary" type="submit">Login</button>
+            <a href="signup.html" class="button button-ghost">Create account</a>
+          </div>
+          <div id="loginFeedback" class="feedback"></div>
+          <a href="index.html" class="back-link">Back to dashboard</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
