@@ -2,6 +2,12 @@
 
 React frontend for the QuantityMeasurement backend, built with Vite.
 
+## Environment
+
+Create a `.env` file in the project root:
+
+VITE_API_BASE_URL=http://localhost:5044/api
+
 ## Run Locally
 
 1. Install dependencies with `npm install`.

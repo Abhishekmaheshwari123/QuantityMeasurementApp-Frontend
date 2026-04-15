@@ -298,7 +298,7 @@ function DashboardPage({ session, onLogout }) {
             aria-label="Backend API base URL"
             value={apiBaseDraft}
             onChange={(event) => setApiBaseDraft(event.target.value)}
-            placeholder="http://localhost:5044/api"
+            placeholder="Enter API base URL"
           />
           <button type="submit" className="button button-ghost">
             Save API URL
@@ -775,7 +775,7 @@ function AuthPage({ mode, queryEmail = '', session, onLogout, onAuthSuccess }) {
               aria-label="Backend API base URL"
               value={apiBaseDraft}
               onChange={(event) => setApiBaseDraft(event.target.value)}
-              placeholder="http://localhost:5044/api"
+              placeholder="Enter API base URL"
             />
             <button type="submit" className="button button-ghost">
               Save

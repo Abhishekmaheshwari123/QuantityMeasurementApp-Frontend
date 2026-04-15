@@ -1,5 +1,9 @@
+const defaultApiBaseUrl =
+  window.__APP_ENV__?.API_BASE_URL || `${window.location.origin.replace(/\/+$/, '')}/api`;
+
 window.APP_CONFIG = {
-  apiBaseUrl: localStorage.getItem('qm.apiBaseUrl') || 'http://localhost:5044/api',
+  defaultApiBaseUrl,
+  apiBaseUrl: localStorage.getItem('qm.apiBaseUrl') || defaultApiBaseUrl,
   storageKeys: {
     token: 'qm.token',
     user: 'qm.user',

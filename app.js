@@ -11,7 +11,7 @@ function getBaseUrl() {
 function normalizeBaseUrl(value) {
   const trimmed = String(value || '').trim().replace(/\/+$/, '');
   if (!trimmed) {
-    return 'http://localhost:5044/api';
+    return window.APP_CONFIG.defaultApiBaseUrl;
   }
   if (trimmed.endsWith('/api')) {
     return trimmed;

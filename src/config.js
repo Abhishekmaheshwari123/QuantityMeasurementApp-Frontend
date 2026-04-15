@@ -1,4 +1,14 @@
-export const DEFAULT_API_BASE_URL = 'http://localhost:5044/api';
+function getRuntimeDefaultApiBaseUrl() {
+  if (typeof window === 'undefined') {
+    return '/api';
+  }
+
+  return `${window.location.origin}/api`;
+}
+
+export const DEFAULT_API_BASE_URL =
+  (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE_URL) ||
+  getRuntimeDefaultApiBaseUrl();
 
 export const STORAGE_KEYS = {
   token: 'qm.token',
